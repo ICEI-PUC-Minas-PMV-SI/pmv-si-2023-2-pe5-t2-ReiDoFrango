@@ -9,4 +9,4 @@ A infraestrutura de redes proposta visa atender às necessidades específicas da
 	Neste capítulo é apresentado os recursos de rede seguindo boas práticas de documentação, explorando todas as ferramentas de maneira minuciosa.
 
 ### 2.1- Equipamentos necessários
-[Tabela de equipamentos Matriz](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe5-t2-gado_de_ouro/blob/main/img/tabela1.JPG)
+<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe5-t2-gado_de_ouro/blob/main/img/tabela1.JPG">
