@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Frangao.Data;
 using Frangao.Areas.Identity.Data;
 
+
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("AuthDbContextConnection") ?? throw new InvalidOperationException("Connection string 'AuthDbContextConnection' not found.");
 
