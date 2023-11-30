@@ -1,0 +1,7 @@
+﻿.main {
+    /*background-image: url('../../Assets/wallpaper.jpg');*/
+    background-size: cover; /* Optional: Adjust to your preference */
+    background-position: center; /* Optional: Adjust to your preference */
+    padding-top: 56px; /* Adjust based on your navbar height */
+    padding-bottom: 56px; /* Adjust based on your footer height */
+}

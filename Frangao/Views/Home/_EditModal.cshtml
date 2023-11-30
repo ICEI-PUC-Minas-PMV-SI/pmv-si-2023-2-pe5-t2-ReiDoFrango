@@ -1,0 +1,85 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Edit Granja</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeEditModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Edit form goes here -->
+                <input type="hidden" id="editId" />
+
+                <label>Granja:</label>
+                <input type="text" class="form-control" id="editFarmName" />
+
+                <label>Estado:</label>
+                <input type="text" class="form-control" id="editState" />
+
+                <label>Municipio:</label>
+                <input type="text" class="form-control" id="editMunicipality" />
+
+                <label>Sistema de Produção:</label>
+                <input type="text" class="form-control" id="editProductionSystem" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeEditModal()">Fechar</button>
+                <button type="button" class="btn btn-primary" onclick="saveChanges()">Salvar Mudanças</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function openEditModal(id, farmName, state, municipality, productionSystem) {
+        // Populate modal fields with data
+        $('#editId').val(id);
+        $('#editFarmName').val(farmName);
+        $('#editState').val(state);
+        $('#editMunicipality').val(municipality);
+        $('#editProductionSystem').val(productionSystem);
+
+        // Show the modal
+        $('#editModal').modal('show');
+    }
+
+    function saveChanges() {
+        // Get values from the modal
+        var id = $('#editId').val();
+        var farmName = $('#editFarmName').val();
+        var state = $('#editState').val();
+        var municipality = $('#editMunicipality').val();
+        var productionSystem = $('#editProductionSystem').val();
+
+        // Prepare data to be sent to the server
+        var data = {
+            Id: id,
+            FarmName: farmName,
+            State: state,
+            Municipality: municipality,
+            ProductionSystem: productionSystem
+        };
+
+        // Send an AJAX request to the server to update the database
+        $.ajax({
+            type: 'POST',
+            url: '/Home/Update',
+            data: JSON.stringify(data),
+            contentType: 'application/json',
+            success: function () {
+                window.location.href = '/';
+            },
+            error: function (error) {
+                // Handle error, if needed
+                console.error('Error during update:', error);
+            }
+        });
+    }
+    function closeEditModal() {
+        $('#editModal').modal('hide');
+    }
+
+</script>
