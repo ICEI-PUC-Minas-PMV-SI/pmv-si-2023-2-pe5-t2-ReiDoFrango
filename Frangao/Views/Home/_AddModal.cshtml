@@ -1,0 +1,86 @@
+﻿<!-- Modal for adding a new farm -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addModalLabel">Adicionar nova granja</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeAddModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add form for adding a new farm -->
+                <form id="addFarmForm">
+                    <div class="form-group">
+                        <label for="newFarmName">Nome da Granja</label>
+                        <input type="text" class="form-control" id="newFarmName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newState">Estado</label>
+                        <input type="text" class="form-control" id="newState" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newMunicipality">Município</label>
+                        <input type="text" class="form-control" id="newMunicipality" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newProductionSystem">Sistema de Produção</label>
+                        <input type="text" class="form-control" id="newProductionSystem" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeAddModal()">Fechar</button>
+                <button type="button" class="btn btn-primary" onclick="saveNewFarm()">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openAddModal() {
+        // Show the modal
+        $('#addModal').modal('show');
+    }
+    function saveNewFarm() {
+        // Get values from input fields
+        var farmName = $('#newFarmName').val();
+        var state = $('#newState').val();
+        var municipality = $('#newMunicipality').val();
+        var productionSystem = $('#newProductionSystem').val();
+
+        // Check if all fields are populated
+        if (!farmName || !state || !municipality || !productionSystem) {
+            alert('Preencha todos os campos antes de salvar.');
+            return; // Do not proceed if any field is empty
+        }
+
+        // Create a new farm object
+        var newFarm = {
+            FarmName: farmName,
+            State: state,
+            Municipality: municipality,
+            ProductionSystem: productionSystem
+        };
+
+        $.ajax({
+            url: '/Home/CreateNewFarm',  // Replace with your actual API endpoint
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(newFarm),
+            success: function () {
+                // Close the modal after saving new farm
+                $('#addModal').modal('hide');
+                
+            },
+            error: function (error) {
+                console.error('Error saving new farm:', error);
+                // Handle the error as needed
+            }
+        });
+    }
+    function closeAddModal() {
+        // Close the modal
+        $('#addModal').modal('hide');
+    }
+</script>

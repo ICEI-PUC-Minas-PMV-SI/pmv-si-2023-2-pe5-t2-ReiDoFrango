@@ -1,0 +1,113 @@
+﻿@using Frangao.Data.Models
+@model List<Granja>
+@{
+    ViewData["Title"] = "Home Page";
+    int pageSize = 8; // Define pageSize here
+}
+
+<!-- Include the modal partial view -->
+@await Html.PartialAsync("_EditModal")
+@await Html.PartialAsync("_AddModal")
+@await Html.PartialAsync("_DeleteModal")
+
+<div class="d-flex justify-content-center mt-5">
+    <div class="card border-primary mb-3">
+        <div class="card-header d-flex justify-content-between p-3">
+            <h2>Suas granjas</h2>
+            <button type="button" class="btn btn-primary" data-toggle="modal" onCLick="openAddModal()">Adicionar nova entrada</button>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" style="cursor: pointer;" data-sort-property="FarmName" data-sort-direction="asc" onclick="sortTable(this)">
+                            Granja
+                        </th>
+                        <th scope="col" style="cursor: pointer;" data-sort-property="State" data-sort-direction="asc" onclick="sortTable(this)">
+                            Estado
+                        </th>
+                        <th scope="col" style="cursor: pointer;" data-sort-property="Municipality" data-sort-direction="asc" onclick="sortTable(this)">
+                            Município
+                        </th>
+                        <th scope="col" style="cursor: pointer;" data-sort-property="ProductionSystem" data-sort-direction="asc" onclick="sortTable(this)">
+                            Sistema de Produção
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var granja in Model)
+                    {
+                        <tr>
+                            <th scope="row" class="align-middle" data-property="FarmName">@granja.FarmName</th>
+                            <td class="align-middle" data-property="State">@granja.State</td>
+                            <td class="align-middle" data-property="Municipality">@granja.Municipality</td>
+                            <td class="align-middle" data-property="ProductionSystem">@granja.ProductionSystem</td>
+                            <td class="align-middle">
+                                <button type="button" class="btn btn-primary" style="margin-right: 15px;" onclick="openEditModal('@granja.Id', '@granja.FarmName', '@granja.State', '@granja.Municipality', '@granja.ProductionSystem')">editar</button>
+                                <button type="button" class="btn btn-secondary" onclick="openDeleteModal('@granja.Id','@granja.FarmName')">apagar</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <!-- Add pagination controls -->
+            <div class="d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        @{
+                            var pageCount = (int)Math.Ceiling(Convert.ToInt32(ViewData["TotalGranjasCount"]) / (double)pageSize);
+                            for (int i = 1; i <= pageCount; i++)
+                            {
+                                <li class="page-item @(i == Convert.ToInt32(ViewData["CurrentPage"]) ? "active" : "")">
+                                    <a class="page-link" href="?page=@i">@i</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function sortTable(header) {
+        var property = header.dataset.sortProperty;
+        var direction = header.dataset.sortDirection;
+
+        // Toggle the sorting direction
+        direction = direction === 'asc' ? 'desc' : 'asc';
+
+        // Update data attributes
+        header.dataset.sortDirection = direction;
+
+        // Get the table body
+        var tableBody = document.querySelector('tbody');
+
+        // Get all rows in the table body
+        var rows = Array.from(tableBody.children);
+
+        // Sort the rows based on the selected property and direction
+        rows.sort(function (a, b) {
+            var aValue = a.querySelector(`[data-property="${property}"]`).innerText;
+            var bValue = b.querySelector(`[data-property="${property}"]`).innerText;
+
+            if (direction === 'asc') {
+                return aValue.localeCompare(bValue);
+            } else {
+                return bValue.localeCompare(aValue);
+            }
+        });
+
+        // Remove existing rows from the table
+        rows.forEach(function (row) {
+            tableBody.removeChild(row);
+        });
+
+        // Append the sorted rows back to the table
+        rows.forEach(function (row) {
+            tableBody.appendChild(row);
+        });
+    }
+</script>
