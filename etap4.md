@@ -4,7 +4,7 @@
 
 ​	No contexto da autenticação no sistema Rei dos Frangos, o processo requer a prévia criação de um usuário, conforme ilustrado na figura 40. Tal procedimento demanda a inserção de informações essenciais, tais como nome, sobrenome, email e uma senha alfanumérica. O sistema verifica se todos os campos estão preenchidos e se a senha atende aos requisitos de segurança. Se um campo estiver vazio ou não atendenda aos requisitos, será exibida uma mensagem informando o erro.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe5-t2-gado_de_ouro/blob/main/img/figura40.JPEG">
+<img src="img/figura40.jpeg">
 
 ​	A Figura 41 apresenta a interface de autenticação do sistema, o usuário é solicitado a inserir as credenciais previamente cadastradas, compreendendo o email e a senha. Ao acionar o botão de login, a plataforma realiza uma verificação para assegurar a validade dos dados fornecidos. No caso de correspondência, o usuário é então autenticado e recebe a autorização para acessar o sistema.
 
