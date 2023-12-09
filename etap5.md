@@ -1,61 +1,64 @@
+<div align="center">
+
 <img src="img/0001.jpg">
 
-<img src="img/0002.JPG">
+<img src="img/0002.jpg">
 
-<img src="img/0003.JPG">
+<img src="img/0003.jpg">
 
-<img src="img/0004.JPG">
+<img src="img/0004.jpg">
 
-<img src="img/0005.JPG">
+<img src="img/0005.jpg">
 
-<img src="img/0006.JPG">
+<img src="img/0006.jpg">
 
-<img src="img/0007.JPG">
+<img src="img/0007.jpg">
 
-<img src="img/0008.JPG">
+<img src="img/0008.jpg">
 
-<img src="img/0009.JPG">
+<img src="img/0009.jpg">
 
-<img src="img/0010.JPG">
+<img src="img/0010.jpg">
 
-<img src="img/00011.JPG">
+<img src="img/0011.jpg">
 
-<img src="img/0012.JPG">
+<img src="img/0012.jpg">
 
-<img src="img/0013.JPG">
+<img src="img/0013.jpg">
 
-<img src="img/0014.JPG">
+<img src="img/0014.jpg">
 
-<img src="img/0015.JPG">
+<img src="img/0015.jpg">
 
-<img src="img/0016.JPG">
+<img src="img/0016.jpg">
 
-<img src="img/0017.JPG">
+<img src="img/0017.jpg">
 
-<img src="img/0018.JPG">
+<img src="img/0018.jpg">
 
-<img src="img/0019.JPG">
+<img src="img/0019.jpg">
 
-<img src="img/0020.JPG">
+<img src="img/0020.jpg">
 
-<img src="img/0021.JPG">
+<img src="img/0021.jpg">
 
-<img src="img/0022.JPG">
+<img src="img/0022.jpg">
 
-<img src="img/0023.JPG">
+<img src="img/0023.jpg">
 
-<img src="img/0024.JPG">
+<img src="img/0024.jpg">
 
-<img src="img/0025.JPG">
+<img src="img/0025.jpg">
 
-<img src="img/0026.JPG">
+<img src="img/0026.jpg">
 
-<img src="img/0027.JPG">
+<img src="img/0027.jpg">
 
-<img src="img/0028.JPG">
+<img src="img/0028.jpg">
 
-<img src="img/0029.JPG">
+<img src="img/0029.jpg">
 
-<img src="img/0030.JPG">
+<img src="img/0030.jpg">
     
-<img src="img/0031.JPG">
+<img src="img/0031.jpg">
+</div>
