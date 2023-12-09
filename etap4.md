@@ -8,15 +8,15 @@
 
 ​	A Figura 41 apresenta a interface de autenticação do sistema, o usuário é solicitado a inserir as credenciais previamente cadastradas, compreendendo o email e a senha. Ao acionar o botão de login, a plataforma realiza uma verificação para assegurar a validade dos dados fornecidos. No caso de correspondência, o usuário é então autenticado e recebe a autorização para acessar o sistema.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe5-t2-gado_de_ouro/blob/main/img/figura41.JPEG">
+<img src="img/figura41.jpeg">
 
 ​	Por meio da Figura 42, é possível observar a home page do site Rei dos Frangos, que se configura como uma listagem de todas as granjas pertencentes à empresa. Nessa interface, os usuários têm acesso a informações cruciais, como o nome da granja, o estado e município nos quais ela está localizada, além do seu sistema de produção. Destaca-se que, além de uma visualização informativa, os usuários contam com a capacidade de interação direta com a plataforma. Essa interatividade permite abrir a interface para cadastrar uma nova granja, editar informações das granjas já existentes e, inclusive, excluir registros, proporcionando uma administração eficiente e personalizada do conjunto de granjas cadastradas no sistema.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe5-t2-gado_de_ouro/blob/main/img/figura42.JPEG">
+<img src="img/figura42.jpeg">
 
 ​	Como evidenciado na Figura 43, para efetuar o cadastro de uma nova granja, é imprescindível fornecer informações específicas, tais como o nome da granja, o estado e município nos quais está localizada, e o sistema de reprodução adotado. Este processo visa garantir a precisão e a completude dos dados associados a cada granja, contribuindo para uma gestão eficaz e organizada das informações dentro do sistema.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe5-t2-gado_de_ouro/blob/main/img/figura43.JPEG">
+<img src="img/figura43.jpeg">
 
 ​	Em síntese, a análise das funcionalidades e interfaces apresentadas anteriormente revela a robustez e a praticidade do sistema desenvolvido para a empresa Rei dos Frangos. A página inicial, destacada na Figura 42, proporciona uma visão abrangente e informativa de todas as granjas, possibilitando aos usuários acesso a informações cruciais e a interação direta com a plataforma. Já a Figura 43 detalha o processo de cadastro de uma nova granja, enfatizando a necessidade de fornecer informações essenciais para manter a integridade do sistema. A conjugação dessas funcionalidades visa oferecer uma experiência de gestão eficiente e personalizada, contribuindo para a eficácia operacional da empresa Rei dos Frangos.
 
